@@ -28,6 +28,7 @@ var RiverDancer = function () {
       // change direction
       this.top = ($("body").height() - 30);
     }
+    this.$node.css("transform", "rotate(360deg)");
     this.setPosition(this.top, this.left);
   }.bind(this));
 };
