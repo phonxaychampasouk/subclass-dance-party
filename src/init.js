@@ -25,6 +25,8 @@ $(document).ready(function () {
       var y = 59;
       for (var i = 0; i < window.blinkyDancers.length; i++) {
         window.blinkyDancers[i].setPosition(y, x);
+        window.blinkyDancers[i].top = y;
+        window.blinkyDancers[i].left = x;
         if (x > ($("body").width() - 100)) {
           y += 60;
           x = 40;

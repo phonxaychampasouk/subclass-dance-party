@@ -33,43 +33,62 @@ body, a:link, a:visited, a:active{
 }
 
 .LineDancer{
-  border:20px solid yellow;
-  border-radius:20px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Pac-Man_character_art_-_Super_Smash_Bros.png/220px-Pac-Man_character_art_-_Super_Smash_Bros.png");
+  background-size: 100% 100%;
+  border: 0;
+  border-radius:0;
+  width: 40px;
+  height: 40px;
 }
 
 .linesize3{
-  border:30px solid yellow;
-  border-radius:30px;
+  width: 60px;
+  height: 60px;
 }
 
 .linesize4{
-  border:40px solid yellow;
-  border-radius:40px;
+  width: 80px;
+  height: 80px;
 }
 
 .linesize5{
-  border:50px solid yellow;
-  border-radius:50px;
+  width: 100px;
+  height: 100px;
 }
 
 .linesize6{
-  border:60px solid yellow;
-  border-radius:60px;
-}
-
-.linesize6{
-  border:60px solid yellow;
-  border-radius:60px;
+  width: 120px;
+  height: 120px;
 }
 
 .linesize7{
-  border:70px solid yellow;
-  border-radius:70px;
+  width: 140px;
+  height: 140px;
 }
 
 .linesize8{
-  border:80px solid yellow;
-  border-radius:80px;
+  width: 160px;
+  height: 160px;
+}
+
+.linesize9{
+  width: 180px;
+  height: 180px;
+}
+
+.linesize10{
+  width: 200px;
+  height: 200px;
+}
+
+.linesize11{
+  width: 220px;
+  height: 220px;
+}
+
+.linesize12{
+  width: 240px;
+  height: 240px;
 }
 
 .RiverDancer{

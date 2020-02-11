@@ -50,7 +50,7 @@ LineDancer.prototype.step = function () {
       window.blinkyDancers[i].$node.remove();
       window.blinkyDancers.splice(i,1);
       // and grow
-      if (this.size < 8) {
+      if (this.size < 12) {
         this.size++;
       }
       this.$node.addClass("linesize"+this.size);
