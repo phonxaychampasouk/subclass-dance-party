@@ -42,13 +42,18 @@ LineDancer.prototype.step = function () {
   }
 
   // check all of the dots on the page
-  window.dancers
-
-  // if there is a dot whose position is close to yours, and it is a blinkydancer
-
-  // remove that blinkydancer
-
-  // grow
+  for (var i=0; i < window.blinkyDancers.length; i++) {
+    // this.top and this.left is our position
+    // window.blinkyDancers[i].top and window.blinkyDancers[i].left is their position
+    if (window.blinkyDancers[i].left > this.left && window.blinkyDancers[i].left < this.left+30
+      && window.blinkyDancers[i].top > this.top && window.blinkyDancers[i].top < this.top+30) {
+      // remove the blinky dancer
+        window.blinkyDancers[i].$node.remove();
+        window.blinkyDancers.splice(i,1);
+      // and grow
+      
+    }
+  }
 
   this.top += this.ymove;
   this.left += this.xmove;
