@@ -37,6 +37,42 @@ body, a:link, a:visited, a:active{
   border-radius:20px;
 }
 
+.linesize3{
+  border:30px solid yellow;
+  border-radius:30px;
+}
+
+.linesize4{
+  border:40px solid yellow;
+  border-radius:40px;
+}
+
+.linesize5{
+  border:50px solid yellow;
+  border-radius:50px;
+}
+
+.linesize6{
+  border:60px solid yellow;
+  border-radius:60px;
+}
+
+.linesize6{
+  border:60px solid yellow;
+  border-radius:60px;
+}
+
+.linesize7{
+  border:70px solid yellow;
+  border-radius:70px;
+}
+
+.linesize8{
+  border:80px solid yellow;
+  border-radius:80px;
+}
+
 .RiverDancer{
 
 }
+
