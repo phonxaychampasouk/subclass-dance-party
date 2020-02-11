@@ -21,7 +21,25 @@ LineDancer.prototype.step = function () {
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
-  this.$node.fadeToggle();
+  // this.$node.fadeToggle();
+
+  if (this.left > ($("body").width() - 40)) {
+    // if it hit the right wall
+    // change direction
+    this.xmove = -this.xmove;
+  } else if (this.top < 32) {
+    // if it hit the top wall
+    // change direction
+    this.ymove = -this.ymove;
+  } else if (this.left < 0) {
+    // if it hit the left wall
+    // change direction
+    this.xmove = -this.xmove;
+  } else if (this.top > $("body").height() - 40) {
+    // if it hit the bottom wall
+    // change direction
+    this.ymove = -this.ymove;
+  }
   this.top += this.ymove;
   this.left += this.xmove;
   this.setPosition(this.top, this.left);
