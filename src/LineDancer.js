@@ -40,6 +40,16 @@ LineDancer.prototype.step = function () {
     // change direction
     this.ymove = -this.ymove;
   }
+
+  // check all of the dots on the page
+  window.dancers
+
+  // if there is a dot whose position is close to yours, and it is a blinkydancer
+
+  // remove that blinkydancer
+
+  // grow
+
   this.top += this.ymove;
   this.left += this.xmove;
   this.setPosition(this.top, this.left);

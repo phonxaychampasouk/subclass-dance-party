@@ -1,5 +1,7 @@
 $(document).ready(function () {
-  window.dancers = [];
+  window.blinkyDancers = [];
+  window.lineDancers = [];
+  window.riverDancers = [];
 
   $('.addDancerButton').on('click', function (event) {
     /* This function sets up the click handlers for the create-dancer
@@ -21,8 +23,8 @@ $(document).ready(function () {
     if (dancerMakerFunctionName === 'LineUp') {
       var x = 40;
       var y = 59;
-      for (var i = 0; i < window.dancers.length; i++) {
-        window.dancers[i].setPosition(y, x);
+      for (var i = 0; i < window.blinkyDancers.length; i++) {
+        window.blinkyDancers[i].setPosition(y, x);
         if (x > ($("body").width() - 100)) {
           y += 60;
           x = 40;
@@ -33,14 +35,18 @@ $(document).ready(function () {
 
     } else {
       var DancerFunction = window[dancerMakerFunctionName];
-
       // make a dancer with a random position
-
       var dancer = new DancerFunction();
-
       dancer.$node.addClass(dancerMakerFunctionName);
 
-      window.dancers.push(dancer);
+      // push to the correct array
+      if (dancerMakerFunctionName === 'BlinkyDancer') {
+        window.blinkyDancers.push(dancer);
+      } else if (dancerMakerFunctionName === 'LineDancer') {
+        window.lineDancers.push(dancer);
+      } else if (dancerMakerFunctionName === 'RiverDancer') {
+        window.riverDancers.push(dancer);
+      }
 
       $('body').append(dancer.$node);
     }
