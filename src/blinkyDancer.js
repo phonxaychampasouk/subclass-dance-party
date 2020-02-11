@@ -1,6 +1,8 @@
-var BlinkyDancer = function(top, left, timeBetweenSteps) {
-
-  Dancer.call(this, top, left, timeBetweenSteps);
+var BlinkyDancer = function() {
+  this.top = Math.random() * ($("body").height() - 84) + 42;
+  this.left = Math.random() * ($("body").width() - 84) + 42;
+  this.timeBetweenSteps = 10;
+  Dancer.call(this, this.top, this.left, this.timeBetweenSteps);
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
 
@@ -16,5 +18,5 @@ BlinkyDancer.prototype.step = function() {
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
-  this.$node.toggle();
+  this.$node.fadeToggle();
 };
