@@ -1,5 +1,9 @@
-var RiverDancer = function (top, left, timeBetweenSteps) {
-  Dancer.call(this, top, left, timeBetweenSteps);
+var RiverDancer = function () {
+  this.top = Math.random() * ($("body").height() - 84) + 42;
+  this.left = Math.random() * ($("body").width() - 84) + 42;
+  this.timeBetweenSteps = 10;
+
+  Dancer.call(this, this.top, this.left, this.timeBetweenSteps);
 
 };
 
