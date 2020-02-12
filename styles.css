@@ -21,6 +21,16 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+
+@keyframes spin {
+	0% {
+		transform: rotateZ(0);
+	}
+	100% {
+		transform: rotateZ(359deg);
+	}
+}
+
 .dancer{
   border:10px solid red;
   border-radius:10px;

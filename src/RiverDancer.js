@@ -28,7 +28,6 @@ var RiverDancer = function () {
       // change direction
       this.top = ($("body").height() - 30);
     }
-    this.$node.css("transform", "rotate(360deg)");
     this.setPosition(this.top, this.left);
   }.bind(this));
 };
@@ -43,5 +42,6 @@ RiverDancer.prototype.step = function () {
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
-  //  this.$node.fadeToggle();
+  // this.$node.css("animation","");
+
 };

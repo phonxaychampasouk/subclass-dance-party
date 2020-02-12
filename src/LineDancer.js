@@ -41,7 +41,7 @@ LineDancer.prototype.step = function () {
   }
 
   // check all of the dots on the page
-  for (var i=0; i < window.blinkyDancers.length; i++) {
+  for (var i = 0; i < window.blinkyDancers.length; i++) {
     // this.top and this.left is our position
     // window.blinkyDancers[i].top and window.blinkyDancers[i].left is their position
     if (window.blinkyDancers[i].left > this.left && window.blinkyDancers[i].left < (this.left + (20 * this.size - 10))
@@ -52,8 +52,26 @@ LineDancer.prototype.step = function () {
       // and grow
       if (this.size < 12) {
         this.size++;
+        this.$node.addClass("linesize"+this.size);
       }
-      this.$node.addClass("linesize"+this.size);
+    }
+  }
+
+  for (var i = 0; i < window.riverDancers.length; i++) {
+    if (window.riverDancers[i].left > (this.left - 10) && window.riverDancers[i].left < (this.left + (20 * this.size - 20))
+      && window.riverDancers[i].top > (this.top - 10) && window.riverDancers[i].top < (this.top + (20 * this.size - 20))) {
+      // remove the river dancer
+      window.riverDancers[i].$node.remove();
+      window.riverDancers.splice(i,1);
+      // and shrink
+      if (this.size > 2) {
+        this.$node.removeClass("linesize"+this.size);
+        this.size--;
+      }
+      this.$node.css("animation","");
+      setTimeout(function(){
+        this.$node.css("animation", "spin 0.7s linear 1");
+      }.bind(this), 1);
     }
   }
 
@@ -61,3 +79,9 @@ LineDancer.prototype.step = function () {
   this.left += this.xmove;
   this.setPosition(this.top, this.left);
 };
+
+
+//    this.$node.css("animation","");
+// setTimeout(function(){
+//   this.$node.css("animation", "spin 1s linear 1");
+// }.bind(this), 1);
